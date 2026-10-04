@@ -1,5 +1,7 @@
 # 收盘见 CloseCall
 
+公开源码：https://github.com/kin684660-commits/closecall-s2 · MIT
+
 **你说会涨？留下判断，收盘见。**
 
 [在线Demo](https://closecall.43.167.174.154.nip.io/) · [教程、运行收据与评估](https://closecall.43.167.174.154.nip.io/submission/index.html)
