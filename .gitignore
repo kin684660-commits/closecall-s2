@@ -12,3 +12,8 @@ test-results/
 node_modules
 public/submission/closecall-source.zip
 public/submission/tutorial-zh.mp4
+
+# Local-only registration and promotion drafts
+/public/submission/project-description.md
+/public/submission/ai-role.md
+/public/submission/user-study.md

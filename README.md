@@ -4,7 +4,7 @@
 
 **你说会涨？留下判断，收盘见。**
 
-[在线Demo](https://closecall.43.167.174.154.nip.io/) · [教程、运行收据与评估](https://closecall.43.167.174.154.nip.io/submission/index.html)
+[在线Demo](https://closecall.43.167.174.154.nip.io/) · [演示、运行收据与技术验证](https://closecall.43.167.174.154.nip.io/submission/index.html)
 
 CloseCall 是人类与 AI 的美股预测校准工作台。AI 先独立作答并提交内容摘要，人类确认概率与理由后揭晓答案；到期按事先约定的价格规则核验，生成判断收据与 Brier 分数。不是自动交易机器人，不连接交易账户、不接受资金押注。
 
