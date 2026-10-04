@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.env*
+!.env.example
+data/
+work/
+*.sqlite*
+*.tsbuildinfo
+playwright-report/
+test-results/
+
+node_modules
+public/submission/closecall-source.zip
+public/submission/tutorial-zh.mp4

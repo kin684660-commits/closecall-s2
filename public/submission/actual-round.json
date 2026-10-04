@@ -1,0 +1,471 @@
+{
+  "id": "0cb35b16-3ab6-4a7a-bc45-4343feaccb3c",
+  "createdAt": "2026-10-03T19:28:59.273Z",
+  "status": "settled",
+  "rules": {
+    "version": "1.0",
+    "mode": "sprint",
+    "symbol": "NVDA",
+    "question": "NVDAUSDT 股票永续：封盘后5分钟核验窗口内的首次合格 lastPrice，是否严格高于基准 234.76 USDT？",
+    "baseline": {
+      "symbol": "NVDAUSDT",
+      "instrument": "stock-perpetual",
+      "currency": "USDT",
+      "price": 234.76,
+      "observedAt": "2026-10-03T19:28:54.934Z",
+      "retrievedAt": "2026-10-03T19:28:55.897Z",
+      "provider": "Bitget official Agent SDK · market.tickers",
+      "url": "https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT",
+      "bid": 234.81,
+      "ask": 234.82,
+      "candles": [
+        {
+          "at": "2026-10-02T20:00:00.000Z",
+          "close": 234.15
+        },
+        {
+          "at": "2026-10-02T21:00:00.000Z",
+          "close": 234.08
+        },
+        {
+          "at": "2026-10-02T22:00:00.000Z",
+          "close": 234.17
+        },
+        {
+          "at": "2026-10-02T23:00:00.000Z",
+          "close": 234.42
+        },
+        {
+          "at": "2026-10-03T00:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T01:00:00.000Z",
+          "close": 234.63
+        },
+        {
+          "at": "2026-10-03T02:00:00.000Z",
+          "close": 234.46
+        },
+        {
+          "at": "2026-10-03T03:00:00.000Z",
+          "close": 234.48
+        },
+        {
+          "at": "2026-10-03T04:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T05:00:00.000Z",
+          "close": 234.43
+        },
+        {
+          "at": "2026-10-03T06:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T07:00:00.000Z",
+          "close": 234.6
+        },
+        {
+          "at": "2026-10-03T08:00:00.000Z",
+          "close": 234.64
+        },
+        {
+          "at": "2026-10-03T09:00:00.000Z",
+          "close": 234.68
+        },
+        {
+          "at": "2026-10-03T10:00:00.000Z",
+          "close": 234.63
+        },
+        {
+          "at": "2026-10-03T11:00:00.000Z",
+          "close": 234.56
+        },
+        {
+          "at": "2026-10-03T12:00:00.000Z",
+          "close": 234.46
+        },
+        {
+          "at": "2026-10-03T13:00:00.000Z",
+          "close": 234.55
+        },
+        {
+          "at": "2026-10-03T14:00:00.000Z",
+          "close": 234.72
+        },
+        {
+          "at": "2026-10-03T15:00:00.000Z",
+          "close": 234.73
+        },
+        {
+          "at": "2026-10-03T16:00:00.000Z",
+          "close": 234.68
+        },
+        {
+          "at": "2026-10-03T17:00:00.000Z",
+          "close": 234.8
+        },
+        {
+          "at": "2026-10-03T18:00:00.000Z",
+          "close": 234.69
+        },
+        {
+          "at": "2026-10-03T19:00:00.000Z",
+          "close": 234.76
+        }
+      ],
+      "warnings": [
+        "股票类 USDT 永续合约，不是原生股票、股权或可赎回代币。",
+        "本挑战比较 lastPrice 观测值，不执行交易，不计为真实收益。"
+      ]
+    },
+    "lockAt": "2026-10-03T19:31:56.376Z",
+    "settleAt": "2026-10-03T19:36:56.376Z",
+    "expiresAt": "2026-10-03T19:38:56.376Z",
+    "targetDate": null,
+    "settlementPolicy": "Bitget官方SDK：目标时间到目标时间+120秒内，首次取得的有效ticker，要求行情ts也在窗口内、相对获取时间不超过120秒；不回填或外推。",
+    "tiePolicy": "no",
+    "basis": "USDT-perpetual-last"
+  },
+  "evidence": [
+    {
+      "id": "native-daily",
+      "title": "原生美股 · 最近完整交易日日线",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo",
+      "text": "[{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":228.4499969482422,\"observedAt\":\"2026-09-03T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.655Z\",\"sessionDate\":\"2026-09-03\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":230.36000061035156,\"observedAt\":\"2026-09-04T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.655Z\",\"sessionDate\":\"2026-09-04\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":225.72999572753906,\"observedAt\":\"2026-09-08T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.655Z\",\"sessionDate\":\"2026-09-08\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":223.6699981689453,\"observedAt\":\"2026-09-09T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.655Z\",\"sessionDate\":\"2026-09-09\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":218.36000061035156,\"observedAt\":\"2026-09-10T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.656Z\",\"sessionDate\":\"2026-09-10\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":218.2899932861328,\"observedAt\":\"2026-09-11T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.656Z\",\"sessionDate\":\"2026-09-11\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":210.9600067138672,\"observedAt\":\"2026-09-14T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.656Z\",\"sessionDate\":\"2026-09-14\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":212.1699981689453,\"observedAt\":\"2026-09-15T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.656Z\",\"sessionDate\":\"2026-09-15\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":213.89999389648438,\"observedAt\":\"2026-09-16T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.657Z\",\"sessionDate\":\"2026-09-16\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":219.33999633789062,\"observedAt\":\"2026-09-17T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.657Z\",\"sessionDate\":\"2026-09-17\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":222.27000427246094,\"observedAt\":\"2026-09-18T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.657Z\",\"sessionDate\":\"2026-09-18\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":227.3800048828125,\"observedAt\":\"2026-09-21T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.657Z\",\"sessionDate\":\"2026-09-21\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":228.8699951171875,\"observedAt\":\"2026-09-22T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.657Z\",\"sessionDate\":\"2026-09-22\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":225.50999450683594,\"observedAt\":\"2026-09-23T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.658Z\",\"sessionDate\":\"2026-09-23\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":224.5800018310547,\"observedAt\":\"2026-09-24T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.658Z\",\"sessionDate\":\"2026-09-24\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":225.07000732421875,\"observedAt\":\"2026-09-25T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.658Z\",\"sessionDate\":\"2026-09-25\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":228.86000061035156,\"observedAt\":\"2026-09-28T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.658Z\",\"sessionDate\":\"2026-09-28\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":227.2100067138672,\"observedAt\":\"2026-09-29T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.658Z\",\"sessionDate\":\"2026-09-29\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":228.3800048828125,\"observedAt\":\"2026-09-30T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.659Z\",\"sessionDate\":\"2026-09-30\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":230.86000061035156,\"observedAt\":\"2026-10-01T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.659Z\",\"sessionDate\":\"2026-10-01\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]},{\"symbol\":\"NVDA\",\"instrument\":\"equity\",\"currency\":\"USD\",\"price\":233.9499969482422,\"observedAt\":\"2026-10-02T20:00:00.000Z\",\"retrievedAt\":\"2026-10-03T19:28:55.659Z\",\"sessionDate\":\"2026-10-02\",\"provider\":\"Yahoo Finance · daily unadjusted close\",\"url\":\"https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=1mo\",\"warnings\":[\"日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。\",\"公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。\"]}]",
+      "retrievedAt": "2026-10-03T19:28:55.659Z",
+      "observedAt": "2026-10-02T20:00:00.000Z",
+      "hash": "d84d2fd13b8f85589e3d6e4109b5124de233eab9d356a17050dbc84de475a0e5",
+      "role": "context",
+      "warnings": [
+        "日线 close 字段，使用纽约交易日映射收盘；不是原始逐笔成交时间。",
+        "公共数据可能延迟或修订；收盘后至少等待20分钟，报价不代表可执行价格。"
+      ]
+    },
+    {
+      "id": "bitget-instruments",
+      "title": "Bitget 官方 SDK · instruments",
+      "url": "https://api.bitget.com/api/v3/market/instruments?category=USDT-FUTURES&symbol=NVDAUSDT",
+      "text": "[{\"symbol\":\"NVDAUSDT\",\"category\":\"USDT-FUTURES\",\"baseCoin\":\"NVDA\",\"quoteCoin\":\"USDT\",\"symbolType\":\"stock\",\"isRwa\":\"YES\",\"buyLimitPriceRatio\":\"0.02\",\"sellLimitPriceRatio\":\"0.02\",\"feeRateUpRatio\":\"0.005\",\"makerFeeRate\":\"0.0002\",\"takerFeeRate\":\"0.0006\",\"openCostUpRatio\":\"0.01\",\"minOrderQty\":\"0.01\",\"maxOrderQty\":\"52000\",\"pricePrecision\":\"2\",\"quantityPrecision\":\"2\",\"quotePrecision\":\"\",\"priceMultiplier\":\"0.01\",\"quantityMultiplier\":\"0.01\",\"type\":\"perpetual\",\"minOrderAmount\":\"5\",\"maxSymbolOrderNum\":\"\",\"maxProductOrderNum\":\"400\",\"maxPositionNum\":\"200\",\"status\":\"online\",\"offTime\":\"-1\",\"limitOpenTime\":\"-1\",\"deliveryTime\":\"\",\"deliveryStartTime\":\"\",\"deliveryPeriod\":\"\",\"launchTime\":\"1769994062273\",\"fundInterval\":\"8\",\"minLeverage\":\"1\",\"maxLeverage\":\"100\",\"maintainTime\":\"\",\"maxMarketOrderQty\":\"9500\"}]",
+      "retrievedAt": "2026-10-03T19:28:55.488Z",
+      "observedAt": null,
+      "hash": "166412f0f76b44599f6d2aa84841782312c267c3524ac31f4f4c9d12b46c050a",
+      "role": "context",
+      "warnings": []
+    },
+    {
+      "id": "bitget-tickers",
+      "title": "Bitget 官方 SDK · tickers",
+      "url": "https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT",
+      "text": "[{\"category\":\"USDT-FUTURES\",\"symbol\":\"NVDAUSDT\",\"ts\":\"1791055734934\",\"lastPrice\":\"234.76\",\"openPrice24h\":\"234.01\",\"highPrice24h\":\"235.01\",\"lowPrice24h\":\"233.93\",\"ask1Price\":\"234.82\",\"bid1Price\":\"234.81\",\"bid1Size\":\"5.22\",\"ask1Size\":\"45.5\",\"price24hPcnt\":\"0.0032\",\"volume24h\":\"10930.13\",\"turnover24h\":\"2561959.1272\",\"indexPrice\":\"234.7533389237792113\",\"markPrice\":\"234.76\",\"fundingRate\":\"0\",\"openInterest\":\"46648.699999999561\",\"deliveryStartTime\":\"\",\"deliveryTime\":\"\",\"deliveryStatus\":\"\"}]",
+      "retrievedAt": "2026-10-03T19:28:55.612Z",
+      "observedAt": null,
+      "hash": "9bcf043477902d6b07426bc4d997564a495af40af8467b635adcaeb3374265e2",
+      "role": "context",
+      "warnings": []
+    },
+    {
+      "id": "bitget-candles",
+      "title": "Bitget 官方 SDK · candles",
+      "url": "https://api.bitget.com/api/v3/market/candles?category=USDT-FUTURES&symbol=NVDAUSDT&interval=1H&limit=24",
+      "text": "[[\"1790971200000\",\"234.23\",\"234.39\",\"233.93\",\"234.15\",\"2415.51\",\"565586.6744\"],[\"1790974800000\",\"234.15\",\"234.25\",\"234\",\"234.08\",\"648.76\",\"151884.75\"],[\"1790978400000\",\"234.08\",\"234.19\",\"234.03\",\"234.17\",\"197.68\",\"46280.7087\"],[\"1790982000000\",\"234.17\",\"234.51\",\"234.17\",\"234.42\",\"272.11\",\"63760.4751\"],[\"1790985600000\",\"234.42\",\"234.59\",\"234.4\",\"234.45\",\"206.06\",\"48326.157\"],[\"1790989200000\",\"234.45\",\"234.69\",\"234.44\",\"234.63\",\"202.74\",\"47561.5357\"],[\"1790992800000\",\"234.63\",\"234.63\",\"234.46\",\"234.46\",\"230.49\",\"54061.4646\"],[\"1790996400000\",\"234.46\",\"234.53\",\"234.46\",\"234.48\",\"75.56\",\"17717.971\"],[\"1791000000000\",\"234.48\",\"234.49\",\"234.35\",\"234.45\",\"129.65\",\"30393.5647\"],[\"1791003600000\",\"234.45\",\"234.45\",\"234.4\",\"234.43\",\"81.93\",\"19206.0203\"],[\"1791007200000\",\"234.43\",\"234.52\",\"234.37\",\"234.45\",\"304.88\",\"71474.627\"],[\"1791010800000\",\"234.45\",\"234.66\",\"234.45\",\"234.6\",\"182.62\",\"42831.1804\"],[\"1791014400000\",\"234.6\",\"234.66\",\"234.46\",\"234.64\",\"213.3\",\"50037.914\"],[\"1791018000000\",\"234.64\",\"235.01\",\"234.63\",\"234.68\",\"302.82\",\"71122.7031\"],[\"1791021600000\",\"234.68\",\"234.76\",\"234.49\",\"234.63\",\"244.17\",\"57285.7576\"],[\"1791025200000\",\"234.63\",\"234.69\",\"234.54\",\"234.56\",\"201.12\",\"47185.4165\"],[\"1791028800000\",\"234.56\",\"234.7\",\"234.45\",\"234.46\",\"292.94\",\"68698.7951\"],[\"1791032400000\",\"234.46\",\"234.61\",\"234.41\",\"234.55\",\"186.99\",\"43845.2046\"],[\"1791036000000\",\"234.55\",\"234.75\",\"234.51\",\"234.72\",\"202.73\",\"47567.6931\"],[\"1791039600000\",\"234.72\",\"234.78\",\"234.5\",\"234.73\",\"992.2\",\"232806.6891\"],[\"1791043200000\",\"234.73\",\"234.75\",\"234.64\",\"234.68\",\"158.28\",\"37152.1283\"],[\"1791046800000\",\"234.68\",\"234.83\",\"234.67\",\"234.8\",\"160.69\",\"37723.58\"],[\"1791050400000\",\"234.8\",\"234.86\",\"234.69\",\"234.69\",\"111.39\",\"26150.6439\"],[\"1791054000000\",\"234.69\",\"234.82\",\"234.61\",\"234.76\",\"85.24\",\"20005.9017\"]]",
+      "retrievedAt": "2026-10-03T19:28:55.837Z",
+      "observedAt": null,
+      "hash": "5cf30d6990dead17a049dedc35c99ac7844a57624fa854a8afbc01381af9d67a",
+      "role": "context",
+      "warnings": []
+    },
+    {
+      "id": "bitget-orderbook",
+      "title": "Bitget 官方 SDK · orderbook",
+      "url": "https://api.bitget.com/api/v3/market/orderbook?category=USDT-FUTURES&symbol=NVDAUSDT&limit=5",
+      "text": "{\"a\":[[234.82,3.71],[234.83,2.03],[234.84,17.21],[234.85,19.66],[234.86,12.42]],\"b\":[[234.81,5.22],[234.8,5.69],[234.79,13.4],[234.78,14.82],[234.77,17.28]],\"ts\":\"1791055736163\"}",
+      "retrievedAt": "2026-10-03T19:28:55.897Z",
+      "observedAt": null,
+      "hash": "77ff068b2710c4cdf9e4ab8ff5124e76db74740fafe9d78a93625ffc3b464e6e",
+      "role": "context",
+      "warnings": []
+    }
+  ],
+  "traces": [
+    {
+      "tool": "Yahoo native daily chart",
+      "status": "success",
+      "durationMs": 540
+    },
+    {
+      "tool": "Bitget SDK market.instruments",
+      "status": "success",
+      "durationMs": 362
+    },
+    {
+      "tool": "Bitget SDK market.tickers",
+      "status": "success",
+      "durationMs": 124
+    },
+    {
+      "tool": "Bitget SDK market.candles",
+      "status": "success",
+      "durationMs": 349
+    },
+    {
+      "tool": "Bitget SDK market.orderbook",
+      "status": "success",
+      "durationMs": 409
+    },
+    {
+      "tool": "Bitget MCP equity_price_quote",
+      "status": "failed",
+      "error": "MCP provider quote unavailable",
+      "durationMs": 1258
+    }
+  ],
+  "ai": {
+    "probability": 0.42,
+    "thesis": "看涨考虑：Bitget 永续最新 lastPrice 恰为 234.76，与基准相等；最近 1H K 线显示价格从 234.15 逐步抬升，最后一根收于 234.76，且买一 234.81 高于基准，说明封盘后核验窗口内若出现轻微上行，首次合格 lastPrice 可能严格高于 234.76。看跌考虑：基准本身就是当前 lastPrice，且卖一 234.82 仅略高、买一 234.81 仅略高，价格在基准附近窄幅震荡；最近多根 K 线高点多次触及 234.76 后回落，缺乏明确突破动能，首次合格 lastPrice 更可能等于或低于基准。证据稀疏：仅有原生美股日线收盘（约 225 附近，且为延迟/非逐笔）和 Bitget 永续快照，无法证明封盘后 5 分钟窗口内的具体首次成交价。",
+    "evidenceIds": [
+      "native-daily",
+      "bitget-instruments",
+      "bitget-tickers",
+      "bitget-candles",
+      "bitget-orderbook"
+    ],
+    "caveats": [
+      "原生美股日线收盘价与 NVDAUSDT 股票永续是不同工具，不能直接换算或证明永续在核验窗口内的首次 lastPrice。",
+      "所有 Bitget 快照均为单一时刻的延迟公共数据，未提供封盘后 5 分钟核验窗口内的逐笔或首次合格 lastPrice。",
+      "基准 234.76 恰等于当前 lastPrice，结果对微小价格变动和快照时点高度敏感，证据不足以给出高置信判断。"
+    ],
+    "model": "deepseek-flash",
+    "usage": {
+      "prompt_tokens": 5453,
+      "completion_tokens": 365,
+      "total_tokens": 5818,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5453
+    },
+    "durationMs": 2895,
+    "submittedAt": "2026-10-03T19:28:59.271Z"
+  },
+  "aiHash": "019348e4570d64a7f42e79e334d9564f484af869729a455503a829b5e7679409",
+  "aiSalt": "84b335545b438c2cfb6db18b9b3074037746a69e8436b2d1",
+  "human": {
+    "probability": 0.5,
+    "thesis": "开发者功能验证：缺少短时方向优势，因此选择50%作为基线；此判断不代表真实用户使用或投资建议。",
+    "evidenceIds": [],
+    "caveats": [
+      "用户独立判断；未被系统认定为事实。"
+    ],
+    "submittedAt": "2026-10-03T19:30:40.733Z"
+  },
+  "humanHash": "7be95b2792ba42d5333c6b291215c5b4a4751432b05cc924fad88deb2e14b270",
+  "humanSalt": "88855dc4830550fce9feac9f1e0c0391fd598deb173af1f2",
+  "result": {
+    "outcome": 0,
+    "terminal": {
+      "symbol": "NVDAUSDT",
+      "instrument": "stock-perpetual",
+      "currency": "USDT",
+      "price": 234.69,
+      "observedAt": "2026-10-03T19:37:02.178Z",
+      "retrievedAt": "2026-10-03T19:37:02.787Z",
+      "provider": "Bitget official Agent SDK · market.tickers",
+      "url": "https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT",
+      "bid": 234.67,
+      "ask": 234.68,
+      "candles": [
+        {
+          "at": "2026-10-02T20:00:00.000Z",
+          "close": 234.15
+        },
+        {
+          "at": "2026-10-02T21:00:00.000Z",
+          "close": 234.08
+        },
+        {
+          "at": "2026-10-02T22:00:00.000Z",
+          "close": 234.17
+        },
+        {
+          "at": "2026-10-02T23:00:00.000Z",
+          "close": 234.42
+        },
+        {
+          "at": "2026-10-03T00:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T01:00:00.000Z",
+          "close": 234.63
+        },
+        {
+          "at": "2026-10-03T02:00:00.000Z",
+          "close": 234.46
+        },
+        {
+          "at": "2026-10-03T03:00:00.000Z",
+          "close": 234.48
+        },
+        {
+          "at": "2026-10-03T04:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T05:00:00.000Z",
+          "close": 234.43
+        },
+        {
+          "at": "2026-10-03T06:00:00.000Z",
+          "close": 234.45
+        },
+        {
+          "at": "2026-10-03T07:00:00.000Z",
+          "close": 234.6
+        },
+        {
+          "at": "2026-10-03T08:00:00.000Z",
+          "close": 234.64
+        },
+        {
+          "at": "2026-10-03T09:00:00.000Z",
+          "close": 234.68
+        },
+        {
+          "at": "2026-10-03T10:00:00.000Z",
+          "close": 234.63
+        },
+        {
+          "at": "2026-10-03T11:00:00.000Z",
+          "close": 234.56
+        },
+        {
+          "at": "2026-10-03T12:00:00.000Z",
+          "close": 234.46
+        },
+        {
+          "at": "2026-10-03T13:00:00.000Z",
+          "close": 234.55
+        },
+        {
+          "at": "2026-10-03T14:00:00.000Z",
+          "close": 234.72
+        },
+        {
+          "at": "2026-10-03T15:00:00.000Z",
+          "close": 234.73
+        },
+        {
+          "at": "2026-10-03T16:00:00.000Z",
+          "close": 234.68
+        },
+        {
+          "at": "2026-10-03T17:00:00.000Z",
+          "close": 234.8
+        },
+        {
+          "at": "2026-10-03T18:00:00.000Z",
+          "close": 234.69
+        },
+        {
+          "at": "2026-10-03T19:00:00.000Z",
+          "close": 234.69
+        }
+      ],
+      "warnings": [
+        "股票类 USDT 永续合约，不是原生股票、股权或可赎回代币。",
+        "本挑战比较 lastPrice 观测值，不执行交易，不计为真实收益。"
+      ]
+    },
+    "delta": -0.02981768614754854,
+    "aiBrier": 0.17639999999999997,
+    "humanBrier": 0.25,
+    "winner": "ai",
+    "resolvedAt": "2026-10-03T19:37:02.788Z",
+    "evidence": [
+      {
+        "id": "bitget-instruments",
+        "title": "Bitget 官方 SDK · instruments",
+        "url": "https://api.bitget.com/api/v3/market/instruments?category=USDT-FUTURES&symbol=NVDAUSDT",
+        "text": "[{\"symbol\":\"NVDAUSDT\",\"category\":\"USDT-FUTURES\",\"baseCoin\":\"NVDA\",\"quoteCoin\":\"USDT\",\"symbolType\":\"stock\",\"isRwa\":\"YES\",\"buyLimitPriceRatio\":\"0.02\",\"sellLimitPriceRatio\":\"0.02\",\"feeRateUpRatio\":\"0.005\",\"makerFeeRate\":\"0.0002\",\"takerFeeRate\":\"0.0006\",\"openCostUpRatio\":\"0.01\",\"minOrderQty\":\"0.01\",\"maxOrderQty\":\"52000\",\"pricePrecision\":\"2\",\"quantityPrecision\":\"2\",\"quotePrecision\":\"\",\"priceMultiplier\":\"0.01\",\"quantityMultiplier\":\"0.01\",\"type\":\"perpetual\",\"minOrderAmount\":\"5\",\"maxSymbolOrderNum\":\"\",\"maxProductOrderNum\":\"400\",\"maxPositionNum\":\"200\",\"status\":\"online\",\"offTime\":\"-1\",\"limitOpenTime\":\"-1\",\"deliveryTime\":\"\",\"deliveryStartTime\":\"\",\"deliveryPeriod\":\"\",\"launchTime\":\"1769994062273\",\"fundInterval\":\"8\",\"minLeverage\":\"1\",\"maxLeverage\":\"100\",\"maintainTime\":\"\",\"maxMarketOrderQty\":\"9500\"}]",
+        "retrievedAt": "2026-10-03T19:37:02.180Z",
+        "observedAt": null,
+        "hash": "166412f0f76b44599f6d2aa84841782312c267c3524ac31f4f4c9d12b46c050a",
+        "role": "settlement",
+        "warnings": []
+      },
+      {
+        "id": "bitget-tickers",
+        "title": "Bitget 官方 SDK · tickers",
+        "url": "https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT",
+        "text": "[{\"category\":\"USDT-FUTURES\",\"symbol\":\"NVDAUSDT\",\"ts\":\"1791056222178\",\"lastPrice\":\"234.69\",\"openPrice24h\":\"234.34\",\"highPrice24h\":\"235.01\",\"lowPrice24h\":\"233.93\",\"ask1Price\":\"234.68\",\"bid1Price\":\"234.67\",\"bid1Size\":\"106.52\",\"ask1Size\":\"1.91\",\"price24hPcnt\":\"0.00149\",\"volume24h\":\"10694.77\",\"turnover24h\":\"2506850.4487\",\"indexPrice\":\"234.741814408029989\",\"markPrice\":\"234.69\",\"fundingRate\":\"0\",\"openInterest\":\"46638.379999999562\",\"deliveryStartTime\":\"\",\"deliveryTime\":\"\",\"deliveryStatus\":\"\"}]",
+        "retrievedAt": "2026-10-03T19:37:02.362Z",
+        "observedAt": null,
+        "hash": "c2eb2c716bfa9964f416cca869359591a04d809f1b333462199f491ca1f696ba",
+        "role": "settlement",
+        "warnings": []
+      },
+      {
+        "id": "bitget-orderbook",
+        "title": "Bitget 官方 SDK · orderbook",
+        "url": "https://api.bitget.com/api/v3/market/orderbook?category=USDT-FUTURES&symbol=NVDAUSDT&limit=5",
+        "text": "{\"a\":[[234.68,1.91],[234.69,12.86],[234.7,10.19],[234.71,15.2],[234.72,6.12]],\"b\":[[234.67,4.1],[234.66,2.71],[234.65,3.9],[234.64,5.45],[234.63,33.7]],\"ts\":\"1791056222985\"}",
+        "retrievedAt": "2026-10-03T19:37:02.787Z",
+        "observedAt": null,
+        "hash": "c8395c2fcde0e351672239abf2af0635bcd600ab7bf7346a948562903bf10335",
+        "role": "settlement",
+        "warnings": []
+      },
+      {
+        "id": "bitget-candles",
+        "title": "Bitget 官方 SDK · candles",
+        "url": "https://api.bitget.com/api/v3/market/candles?category=USDT-FUTURES&symbol=NVDAUSDT&interval=1H&limit=24",
+        "text": "[[\"1790971200000\",\"234.23\",\"234.39\",\"233.93\",\"234.15\",\"2415.51\",\"565586.6744\"],[\"1790974800000\",\"234.15\",\"234.25\",\"234\",\"234.08\",\"648.76\",\"151884.75\"],[\"1790978400000\",\"234.08\",\"234.19\",\"234.03\",\"234.17\",\"197.68\",\"46280.7087\"],[\"1790982000000\",\"234.17\",\"234.51\",\"234.17\",\"234.42\",\"272.11\",\"63760.4751\"],[\"1790985600000\",\"234.42\",\"234.59\",\"234.4\",\"234.45\",\"206.06\",\"48326.157\"],[\"1790989200000\",\"234.45\",\"234.69\",\"234.44\",\"234.63\",\"202.74\",\"47561.5357\"],[\"1790992800000\",\"234.63\",\"234.63\",\"234.46\",\"234.46\",\"230.49\",\"54061.4646\"],[\"1790996400000\",\"234.46\",\"234.53\",\"234.46\",\"234.48\",\"75.56\",\"17717.971\"],[\"1791000000000\",\"234.48\",\"234.49\",\"234.35\",\"234.45\",\"129.65\",\"30393.5647\"],[\"1791003600000\",\"234.45\",\"234.45\",\"234.4\",\"234.43\",\"81.93\",\"19206.0203\"],[\"1791007200000\",\"234.43\",\"234.52\",\"234.37\",\"234.45\",\"304.88\",\"71474.627\"],[\"1791010800000\",\"234.45\",\"234.66\",\"234.45\",\"234.6\",\"182.62\",\"42831.1804\"],[\"1791014400000\",\"234.6\",\"234.66\",\"234.46\",\"234.64\",\"213.3\",\"50037.914\"],[\"1791018000000\",\"234.64\",\"235.01\",\"234.63\",\"234.68\",\"302.82\",\"71122.7031\"],[\"1791021600000\",\"234.68\",\"234.76\",\"234.49\",\"234.63\",\"244.17\",\"57285.7576\"],[\"1791025200000\",\"234.63\",\"234.69\",\"234.54\",\"234.56\",\"201.12\",\"47185.4165\"],[\"1791028800000\",\"234.56\",\"234.7\",\"234.45\",\"234.46\",\"292.94\",\"68698.7951\"],[\"1791032400000\",\"234.46\",\"234.61\",\"234.41\",\"234.55\",\"186.99\",\"43845.2046\"],[\"1791036000000\",\"234.55\",\"234.75\",\"234.51\",\"234.72\",\"202.73\",\"47567.6931\"],[\"1791039600000\",\"234.72\",\"234.78\",\"234.5\",\"234.73\",\"992.2\",\"232806.6891\"],[\"1791043200000\",\"234.73\",\"234.75\",\"234.64\",\"234.68\",\"158.28\",\"37152.1283\"],[\"1791046800000\",\"234.68\",\"234.83\",\"234.67\",\"234.8\",\"160.69\",\"37723.58\"],[\"1791050400000\",\"234.8\",\"234.86\",\"234.69\",\"234.69\",\"111.39\",\"26150.6439\"],[\"1791054000000\",\"234.69\",\"234.82\",\"234.61\",\"234.69\",\"103.06\",\"24189.1422\"]]",
+        "retrievedAt": "2026-10-03T19:37:02.787Z",
+        "observedAt": null,
+        "hash": "c27e01ea63851866e3de501acbc4f9b0f2015887d69c8e38d35bad225f65c586",
+        "role": "settlement",
+        "warnings": []
+      }
+    ]
+  },
+  "public": true,
+  "alias": "开发验证 · 50%基线",
+  "mine": true,
+  "error": null,
+  "attempts": 1,
+  "proof": {
+    "aiValid": true,
+    "humanValid": true
+  },
+  "audit": [
+    {
+      "seq": 1,
+      "at": "2026-10-03T19:28:59.274Z",
+      "kind": "ai-sealed",
+      "body": "{\"hash\":\"019348e4570d64a7f42e79e334d9564f484af869729a455503a829b5e7679409\",\"rules\":{\"baseline\":{\"ask\":234.82,\"bid\":234.81,\"candles\":[{\"at\":\"2026-10-02T20:00:00.000Z\",\"close\":234.15},{\"at\":\"2026-10-02T21:00:00.000Z\",\"close\":234.08},{\"at\":\"2026-10-02T22:00:00.000Z\",\"close\":234.17},{\"at\":\"2026-10-02T23:00:00.000Z\",\"close\":234.42},{\"at\":\"2026-10-03T00:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T01:00:00.000Z\",\"close\":234.63},{\"at\":\"2026-10-03T02:00:00.000Z\",\"close\":234.46},{\"at\":\"2026-10-03T03:00:00.000Z\",\"close\":234.48},{\"at\":\"2026-10-03T04:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T05:00:00.000Z\",\"close\":234.43},{\"at\":\"2026-10-03T06:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T07:00:00.000Z\",\"close\":234.6},{\"at\":\"2026-10-03T08:00:00.000Z\",\"close\":234.64},{\"at\":\"2026-10-03T09:00:00.000Z\",\"close\":234.68},{\"at\":\"2026-10-03T10:00:00.000Z\",\"close\":234.63},{\"at\":\"2026-10-03T11:00:00.000Z\",\"close\":234.56},{\"at\":\"2026-10-03T12:00:00.000Z\",\"close\":234.46},{\"at\":\"2026-10-03T13:00:00.000Z\",\"close\":234.55},{\"at\":\"2026-10-03T14:00:00.000Z\",\"close\":234.72},{\"at\":\"2026-10-03T15:00:00.000Z\",\"close\":234.73},{\"at\":\"2026-10-03T16:00:00.000Z\",\"close\":234.68},{\"at\":\"2026-10-03T17:00:00.000Z\",\"close\":234.8},{\"at\":\"2026-10-03T18:00:00.000Z\",\"close\":234.69},{\"at\":\"2026-10-03T19:00:00.000Z\",\"close\":234.76}],\"currency\":\"USDT\",\"instrument\":\"stock-perpetual\",\"observedAt\":\"2026-10-03T19:28:54.934Z\",\"price\":234.76,\"provider\":\"Bitget official Agent SDK · market.tickers\",\"retrievedAt\":\"2026-10-03T19:28:55.897Z\",\"symbol\":\"NVDAUSDT\",\"url\":\"https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT\",\"warnings\":[\"股票类 USDT 永续合约，不是原生股票、股权或可赎回代币。\",\"本挑战比较 lastPrice 观测值，不执行交易，不计为真实收益。\"]},\"basis\":\"USDT-perpetual-last\",\"expiresAt\":\"2026-10-03T19:38:56.376Z\",\"lockAt\":\"2026-10-03T19:31:56.376Z\",\"mode\":\"sprint\",\"question\":\"NVDAUSDT 股票永续：封盘后5分钟核验窗口内的首次合格 lastPrice，是否严格高于基准 234.76 USDT？\",\"settleAt\":\"2026-10-03T19:36:56.376Z\",\"settlementPolicy\":\"Bitget官方SDK：目标时间到目标时间+120秒内，首次取得的有效ticker，要求行情ts也在窗口内、相对获取时间不超过120秒；不回填或外推。\",\"symbol\":\"NVDA\",\"targetDate\":null,\"tiePolicy\":\"no\",\"version\":\"1.0\"}}",
+      "previous": "GENESIS",
+      "hash": "9701df9b3b580ce22dc32e329067043b830d942644c5be1b719744367beb25c9"
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-03T19:30:40.733Z",
+      "kind": "human-sealed",
+      "body": "{\"hash\":\"7be95b2792ba42d5333c6b291215c5b4a4751432b05cc924fad88deb2e14b270\",\"public\":true}",
+      "previous": "9701df9b3b580ce22dc32e329067043b830d942644c5be1b719744367beb25c9",
+      "hash": "96830f2b8aa69150452b4484826b9a8a80eef91f2e8a38ecbac067fe14a3b6a3"
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-03T19:37:02.790Z",
+      "kind": "settled",
+      "body": "{\"aiBrier\":0.17639999999999997,\"humanBrier\":0.25,\"outcome\":0,\"terminal\":{\"ask\":234.68,\"bid\":234.67,\"candles\":[{\"at\":\"2026-10-02T20:00:00.000Z\",\"close\":234.15},{\"at\":\"2026-10-02T21:00:00.000Z\",\"close\":234.08},{\"at\":\"2026-10-02T22:00:00.000Z\",\"close\":234.17},{\"at\":\"2026-10-02T23:00:00.000Z\",\"close\":234.42},{\"at\":\"2026-10-03T00:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T01:00:00.000Z\",\"close\":234.63},{\"at\":\"2026-10-03T02:00:00.000Z\",\"close\":234.46},{\"at\":\"2026-10-03T03:00:00.000Z\",\"close\":234.48},{\"at\":\"2026-10-03T04:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T05:00:00.000Z\",\"close\":234.43},{\"at\":\"2026-10-03T06:00:00.000Z\",\"close\":234.45},{\"at\":\"2026-10-03T07:00:00.000Z\",\"close\":234.6},{\"at\":\"2026-10-03T08:00:00.000Z\",\"close\":234.64},{\"at\":\"2026-10-03T09:00:00.000Z\",\"close\":234.68},{\"at\":\"2026-10-03T10:00:00.000Z\",\"close\":234.63},{\"at\":\"2026-10-03T11:00:00.000Z\",\"close\":234.56},{\"at\":\"2026-10-03T12:00:00.000Z\",\"close\":234.46},{\"at\":\"2026-10-03T13:00:00.000Z\",\"close\":234.55},{\"at\":\"2026-10-03T14:00:00.000Z\",\"close\":234.72},{\"at\":\"2026-10-03T15:00:00.000Z\",\"close\":234.73},{\"at\":\"2026-10-03T16:00:00.000Z\",\"close\":234.68},{\"at\":\"2026-10-03T17:00:00.000Z\",\"close\":234.8},{\"at\":\"2026-10-03T18:00:00.000Z\",\"close\":234.69},{\"at\":\"2026-10-03T19:00:00.000Z\",\"close\":234.69}],\"currency\":\"USDT\",\"instrument\":\"stock-perpetual\",\"observedAt\":\"2026-10-03T19:37:02.178Z\",\"price\":234.69,\"provider\":\"Bitget official Agent SDK · market.tickers\",\"retrievedAt\":\"2026-10-03T19:37:02.787Z\",\"symbol\":\"NVDAUSDT\",\"url\":\"https://api.bitget.com/api/v3/market/tickers?category=USDT-FUTURES&symbol=NVDAUSDT\",\"warnings\":[\"股票类 USDT 永续合约，不是原生股票、股权或可赎回代币。\",\"本挑战比较 lastPrice 观测值，不执行交易，不计为真实收益。\"]}}",
+      "previous": "96830f2b8aa69150452b4484826b9a8a80eef91f2e8a38ecbac067fe14a3b6a3",
+      "hash": "2eb118073930336d054ca1c355e83c4896117b3d51ec7608ca00e0bbbb7512c1"
+    }
+  ],
+  "disclosure": "真实前瞻预测。无交易执行、无押金。概率为主观预测；不是投资建议或收益。哈希证明导出内容一致性，不证明运营方无法修改存储。"
+}

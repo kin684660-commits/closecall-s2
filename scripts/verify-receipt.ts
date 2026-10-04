@@ -1,0 +1,5 @@
+import {readFileSync} from 'node:fs';import {verifySeal,sha,canonical,brier} from '../lib/proof';
+const path=process.argv[2];if(!path)throw Error('Usage: node --import tsx scripts/verify-receipt.ts receipt.json');
+const r=JSON.parse(readFileSync(path,'utf8'));if(!r.ai||!r.aiSalt)throw Error('AI payload has not been revealed');
+const checks={ai:verifySeal({rules:r.rules,prediction:r.ai},r.aiSalt,r.aiHash),human:!r.human||verifySeal({rules:r.rules,prediction:r.human},r.humanSalt,r.humanHash),evidence:[...r.evidence,...(r.result?.evidence||[])].every((e:any)=>sha(e.text)===e.hash),audit:(r.audit||[]).every((e:any)=>sha(canonical({roundId:r.id,kind:e.kind,at:e.at,body:e.body,previous:e.previous}))===e.hash),brier:!r.result||(Math.abs(brier(r.ai.probability,r.result.outcome)-r.result.aiBrier)<1e-10&&(!r.human||Math.abs(brier(r.human.probability,r.result.outcome)-r.result.humanBrier)<1e-10))};
+console.log(JSON.stringify({id:r.id,checks,disclosure:'Content verification only; no independent timestamp, truth audit or global audit-chain completeness proof.'},null,2));if(Object.values(checks).some(x=>!x))process.exitCode=1;

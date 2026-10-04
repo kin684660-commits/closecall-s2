@@ -1,0 +1,8 @@
+export type Mode = 'close' | 'sprint';
+export type Evidence = { id:string; title:string; url:string; text:string; retrievedAt:string; observedAt:string|null; hash:string; role:'context'|'baseline'|'settlement'; warnings:string[] };
+export type Quote = { symbol:string; instrument:'equity'|'stock-perpetual'; currency:string; price:number; observedAt:string; retrievedAt:string; provider:string; url:string; sessionDate?:string; bid?:number; ask?:number; candles?:{at:string;close:number}[]; warnings:string[] };
+export type Prediction = { probability:number; thesis:string; evidenceIds:string[]; caveats:string[]; model?:string; usage?:unknown; durationMs?:number; submittedAt:string };
+export type Rules = { version:'1.0'; mode:Mode; symbol:string; question:string; baseline:Quote; lockAt:string; settleAt:string; expiresAt:string; targetDate:string|null; settlementPolicy:string; tiePolicy:'no'; basis:'unadjusted-USD-close'|'USDT-perpetual-last'; };
+export type Round = { id:string; owner:string; createdAt:string; status:'open'|'locked'|'settled'|'unresolved'|'expired'; rules:Rules; evidence:Evidence[]; traces:{tool:string;status:string;error?:string;durationMs:number}[]; ai:Prediction; aiSalt:string; aiHash:string; human:Prediction|null; humanSalt:string|null; humanHash:string|null; result:Result|null; public:boolean; alias:string; nextAttemptAt:string|null; attempts:number; error:string|null };
+export type Result = { outcome:0|1; terminal:Quote; delta:number; humanBrier:number|null; aiBrier:number; winner:'human'|'ai'|'tie'|'unopposed'; resolvedAt:string; evidence:Evidence[]; };
+export const symbols = ['NVDA','AAPL','MSFT','TSLA','AMZN','META'] as const;

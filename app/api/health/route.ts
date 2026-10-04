@@ -1,0 +1,1 @@
+export const dynamic='force-dynamic';export async function GET(){return Response.json({ok:true,service:'closecall',version:'0.1.0',modelConfigured:!!process.env.CLOSECALL_API_KEY,now:new Date().toISOString()});}

@@ -1,0 +1,2 @@
+import {access,sameOrigin} from '@/lib/access';import {commitRound,view} from '@/lib/arena';
+export async function POST(req:Request,ctx:{params:Promise<{id:string}>}){const a=access(req);try{sameOrigin(req);const {id}=await ctx.params;const r=commitRound(id,a.owner,await req.json());return Response.json(view(r,a.owner),{headers:a.headers});}catch(e){return Response.json({error:e instanceof Error?e.message:'封存失败'},{status:409,headers:a.headers});}}
