@@ -1,1 +1,129 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>收盘见 · 演示与技术验证</title><style>body{margin:0;background:#08121e;color:#e9f2f3;font:17px/1.8 system-ui}main{max-width:900px;margin:70px auto;padding:24px}a{color:#83eed6}h1{font-size:48px;line-height:1.2}.card{padding:24px;border:1px solid #244048;border-radius:18px;margin:18px 0}img{width:100%;border-radius:18px}small{color:#a0b6bf}</style><main><a href="/">← 返回收盘见</a><h1>你说会涨？收盘见。</h1><p>独立预测 → 封存 → 真实核验 → 判断收据</p><img src="/art/cover.jpg" alt="收盘见概念图"><div class="card"><h2>完整任务与运行记录</h2><a href="cloud-round.md">真实云端对局 · Markdown</a><br><a href="cloud-round.json">真实云端对局 · JSON</a><br><a href="actual-round.md">本机另一场真实前瞻对局 · Markdown</a><br><a href="actual-round.json">真实前瞻对局 · 完整JSON</a><br><a href="evaluation.md">实测与评估边界</a><p><small>开发者验证样本；单场不证明预测能力或用户认可。原生收盘任务尚未到期。</small></p></div><div class="card"><h2>源码与技术说明</h2><a href="https://github.com/kin684660-commits/closecall-s2">公开 GitHub 源码 · README · MIT</a><a href="closecall-source.zip">完整源码 ZIP · MIT · 含README</a></div><div class="card"><h2>中文教程</h2><p><video controls preload="metadata" style="width:100%;border-radius:16px" src="tutorial-zh.mp4"></video><br><a href="tutorial-zh.mp4">中文教程MP4 · 96秒 · 1080p</a></p></div><small>AI Trading Desk · 开放主题｜不同市场分开核验。源码不含密钥、数据库和私人记录。</small></main></html>
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>收盘见 · 演示与技术验证</title
+  ><style>
+    body {
+      margin: 0;
+      background: #e7e8e6;
+      color: #111413;
+      font:
+        16px/1.85 "Helvetica Neue",
+        "PingFang SC",
+        system-ui;
+    }
+    main {
+      max-width: 1000px;
+      margin: 48px auto;
+      padding: 24px;
+    }
+    a {
+      color: inherit;
+      text-decoration-color: #9aab78;
+      text-underline-offset: 5px;
+    }
+    a:hover {
+      background: #c6ff00;
+    }
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      letter-spacing: -3px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+    .card {
+      padding: 30px;
+      background: #111413;
+      color: #f6f7f0;
+      border: 1px solid #343a36;
+      border-radius: 2px;
+      margin: 20px 0;
+    }
+    .card a {
+      display: inline-block;
+      color: #c6ff00;
+      margin: 5px 0;
+    }
+    .card a:hover {
+      color: #111;
+    }
+    .card h2 {
+      font-size: 25px;
+      letter-spacing: -1px;
+    }
+    img {
+      width: 100%;
+      border-radius: 2px;
+    }
+    small {
+      color: #a9b1a8;
+    }
+    main > small {
+      color: #5d6851;
+    }
+    video {
+      border-radius: 2px !important;
+    }
+    @media (max-width: 600px) {
+      main {
+        margin: 15px auto;
+        padding: 22px;
+      }
+      .card {
+        padding: 22px;
+      }
+      h1 {
+        letter-spacing: -2px;
+      }
+      body {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <main>
+    <a href="/">← 返回收盘见</a>
+    <h1>你说会涨？收盘见。</h1>
+    <p>独立预测 → 封存 → 真实核验 → 判断收据</p>
+    <img src="/art/cover.jpg" alt="收盘见概念图" />
+    <div class="card">
+      <h2>完整任务与运行记录</h2>
+      <a href="cloud-round.md">真实云端对局 · Markdown</a><br /><a
+        href="cloud-round.json"
+        >真实云端对局 · JSON</a
+      ><br /><a href="actual-round.md">本机另一场真实前瞻对局 · Markdown</a
+      ><br /><a href="actual-round.json">真实前瞻对局 · 完整JSON</a><br /><a
+        href="evaluation.md"
+        >实测与评估边界</a
+      >
+      <p>
+        <small
+          >开发者验证样本；单场不证明预测能力或用户认可。原生收盘任务尚未到期。</small
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>源码与技术说明</h2>
+      <a href="https://github.com/kin684660-commits/closecall-s2"
+        >公开 GitHub 源码 · README · MIT</a
+      ><a href="closecall-source.zip">完整源码 ZIP · MIT · 含README</a>
+    </div>
+    <div class="card">
+      <h2>中文教程</h2>
+      <p>
+        <video
+          controls
+          preload="metadata"
+          style="width: 100%; border-radius: 16px"
+          src="tutorial-zh.mp4"
+        ></video
+        ><br /><a href="tutorial-zh.mp4">中文教程MP4 · 96秒 · 1080p</a>
+      </p>
+    </div>
+    <small
+      >AI Trading Desk ·
+      开放主题｜不同市场分开核验。源码不含密钥、数据库和私人记录。</small
+    >
+  </main>
+</html>
